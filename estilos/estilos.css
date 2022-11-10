@@ -125,7 +125,7 @@ a:hover {
   color: #EBD3D1;
 }
 
-header_logo{
+.header_logo{
   max-width: 100%;
 }
 
@@ -158,26 +158,42 @@ padding: 25px;
   display: flex;
   margin-top: 50px;
   padding:5px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
 div.identidad__text{
   display: inline-flex;
   margin: 20px 50px;
-  padding: 10px;
+  padding: 5px;
 }
 
-div.identidad__buttom{
-  display: inline-flex;
-  margin: 1px 350px;
-  padding: 10px 150px;
-  border: 2px solid var(--terciary);
-  color: var(--light);
-  background:var(--terciary);
-  text-decoration: none;
-  transition: all .5s ease-in-out;
+div.identidad__button{
+  position: relative;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 50%;
 }
 
-/*IDENTIDAD*/
+
+.button_contact{
+  border: none;
+  margin: 10px;
+  padding: 24px;
+  width: 220px;
+  border-radius: 6px;
+  cursor: pointer;
+  color:var(--light);
+  background-color: var(--terciary);
+  background-size: 200%;
+  transition: 0.6s;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.button_contact:hover{
+  background-color: var(--primary);;
+}
 
 /*CLIENTES*/
 
@@ -189,23 +205,79 @@ div.identidad__buttom{
   flex-wrap: wrap;
 }
 
-.final {
-background-color: #C0B99E ;
-position: relative;
-display: inline-block;
-font-size: var(--text-xxs);
-align-items:center; 
-padding: 2px;
-margin: 5px 5px;
+.clientes-tit{
+  font-size: var(--text-sm);
+  color: var(--secondary);
+  text-align: center;
+  font-weight: bold;
+}
+.clientes-sub{
+  font-size: var(--text-xs);
+  color: var(--secondary);
+  text-align: center;
 }
 
-.carrusel {
-  width: 150px;
-  height: 150px;
-  padding: 2px;
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
 }
 
-/*Seccion Sobre mí*/
+.flex-item-one{
+  background-color: var(--accent);
+  padding: 10px;
+  flex: 50%;
+  color: var(--light);
+  font-weight: bold;
+}
+
+.flex-item-two{
+  background-color: var(--accent);
+  padding: 10px;
+  flex: 50%;
+  color: var(--light);
+  font-weight: bold;
+}
+.flex-item-three{
+  background-color: var(--accent);
+  padding: 10px;
+  flex: 50%;
+  color: var(--light);
+  font-weight: bold;
+}
+.flex-item-four{
+  background-color: var(--accent);
+  padding: 10px;
+  flex: 50%;
+  color: var(--light);
+  font-weight: bold;
+}
+.flex-item-five{
+  background-color: var(--accent);
+  padding: 10px;
+  flex: 50%;
+  color: var(--light);
+  font-weight: bold;
+}
+.flex-item-six{
+  background-color: var(--accent);
+  padding: 10px;
+  flex: 50%;
+  color: var(--light);
+  font-weight: bold;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-one, .flex-item-two, .flex-item-three, .flex-item-four, .flex-item-five, .flex-item-six {
+    flex: 100%;
+  }
+}
+/*FIN HOME*/
+
+/*SOBRE MI*/
 
 /*PRIMERA PARTE*/
 
@@ -287,14 +359,14 @@ margin: 5px 5px;
   font-size: 16px;
 }
 
-/*Seccion filosofia*/
+/*TERCERA PARTE*/
 
 .mi-filosofia{
   background-color: var(--accent);
-  width: 800px;
-  height: 250px;
+  max-width: 800px;
+  max-height: 250px;
   padding: 5px;
-  margin: 20px 150px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,8 +375,6 @@ margin: 5px 5px;
   .mi-filosofia-txt{
     display: block;
     margin-left: 10px;
-  
-    
   }
   
   .filosofia-titulo{
@@ -320,7 +390,15 @@ margin: 5px 5px;
   display: block;
   padding: 5px;
   }
-/*Seccion filosofia*/
+
+@media only screen and (min-width:320px) and (max-width:480px){
+  .mi-filosofia{
+    max-width: 900px;
+    max-height: 480px;
+    margin:5px;
+  }
+  }
+/*FIN SOBRE MI*/
 
 /*Inicio seccion Servicios*/
 
@@ -430,22 +508,30 @@ margin: 5px 5px;
   transform: scale(1.2); 
 }
 
-.portfolio-buttom{
+.portfolio-button{
 display: flex;
 justify-content: center;
 margin: 10px;
 }
 
-a.buttom {
-  border: 1px solid var(--secondary);
-  padding: 10px; 
-  background-color: var(--terciary); 
-  color: var(--light); 
-  text-decoration: none; 
-  text-transform: uppercase; 
-  font-family: 'Cardo', serif; 
-  font-size:var(--text-xxs)
-  }
+a.contact-button {
+  border: none;
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+  width: 220px;
+  border-radius: 6px;
+  cursor: pointer;
+  color:var(--light);
+  background-color: var(--terciary);
+  background-size: 200%;
+  transition: transform .0.6s;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contact-button :hover{
+transform: scale(1.2); 
+}
 
 /*Fin seccion Porfolio*/
 
@@ -585,6 +671,7 @@ footer{
     color:  var(--light);
     margin: 20px 0 10px;
     padding: 0;
+    display: inline;
    }
     
    .footer-content .footer-links a{
